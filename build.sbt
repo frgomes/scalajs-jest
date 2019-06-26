@@ -1,15 +1,13 @@
 name := "core"
 
-//version := "2018.10.0-SNAPSHOT"
-
 enablePlugins(ScalaJSPlugin)
 
-
-val scala212 = "2.12.7"
+val scala212 = "2.12.8"
+val scala213 = "2.13.0"
 
 scalaVersion := scala212
 
-crossScalaVersions := Seq(scala212)
+crossScalaVersions := Seq(scala212, scala213)
 
 scalacOptions ++= Seq(
   "-feature",
@@ -23,8 +21,7 @@ scalacOptions ++= Seq(
 libraryDependencies ++= Seq(
   "org.scala-lang" % "scala-reflect" % scalaVersion.value)
 
-resolvers in Global += Resolver.bintrayRepo("scalacenter",
-                                            "sbt-maven-releases")
+resolvers in Global += Resolver.bintrayRepo("scalacenter", "sbt-maven-releases")
 
 //bintray
 resolvers += Resolver.jcenterRepo
