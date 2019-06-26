@@ -1,11 +1,9 @@
 name := "core"
 
-//version := "2018.10.0-SNAPSHOT"
-
 enablePlugins(ScalaJSPlugin)
 
 
-val scala212 = "2.12.7"
+val scala212 = "2.12.8"
 
 scalaVersion := scala212
 
